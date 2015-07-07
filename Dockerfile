@@ -9,9 +9,9 @@ RUN apt-get update && \
 
 # Download Wordpress into /app
 RUN rm -fr /app && mkdir /app && \
- curl -L -O http://wordpress.org/wordpress-4.0.tar.gz && \
- tar -xzvf wordpress-4.0.tar.gz -C /app --strip-components=1 && \
- rm wordpress-4.0.tar.gz
+ curl -L -O http://wordpress.org/wordpress-4.2.2.tar.gz && \
+ tar -xzvf wordpress-4.2.2.tar.gz -C /app --strip-components=1 && \
+ rm wordpress-4.2.2.tar.gz
 
 # Add wp-config with info for Wordpress to connect to DB
 ADD wp-config.php /app/wp-config.php
